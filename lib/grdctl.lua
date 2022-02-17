@@ -70,7 +70,7 @@ function GrdCtl:add_sequence(sequence)
                 engine.amp(amp)
                 engine.hz(MusicUtil.note_num_to_freq(note))
             end
-            clock.sleep(clock.get_beat_sec()*duration)    
+            clock.sleep(clock.get_beat_sec()*util.linlin(-30,30,1/4,1,params:get(step.."duration")))    
         end
     end))
 end
